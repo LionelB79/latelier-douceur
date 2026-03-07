@@ -1,0 +1,1591 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="L'Atelier Douceur - Esthéticienne à Mérignac. Massages relaxants, soins du visage dans un cadre chaleureux et apaisant."
+    />
+    <title>L'Atelier Douceur | Esthéticienne à Mérignac</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: "#fdfaf5",
+              gold: {
+                50: "#faf6ed",
+                100: "#f5edd8",
+                200: "#e8d7b0",
+                300: "#d9be82",
+                400: "#c9a96e",
+                500: "#b8935a",
+                600: "#a17a4a",
+                700: "#86613f",
+                800: "#6f4f38",
+                900: "#5d4232",
+              },
+              brown: {
+                50: "#f8f5f3",
+                100: "#efe9e5",
+                200: "#ddd2ca",
+                300: "#c7b5a7",
+                400: "#ad9282",
+                500: "#9a7b69",
+                600: "#8a6a5a",
+                700: "#6b4c3b",
+                800: "#5c4234",
+                900: "#4f3a2f",
+              },
+              beige: {
+                50: "#fdfbf8",
+                100: "#f9f4ed",
+                200: "#f0e6d3",
+                300: "#e5d4b8",
+                400: "#d6bd96",
+                500: "#c7a67a",
+                600: "#b58f62",
+                700: "#977550",
+                800: "#7b5f44",
+                900: "#654e3a",
+              },
+            },
+            fontFamily: {
+              serif: ["Cormorant Garamond", "Georgia", "serif"],
+              sans: ["Raleway", "system-ui", "sans-serif"],
+            },
+            fontWeight: {
+              light: "300",
+              normal: "400",
+              medium: "500",
+              semibold: "600",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- AOS.js CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Swiper.js CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        background-color: #fdfaf5;
+      }
+
+      .font-serif {
+        font-family: "Cormorant Garamond", Georgia, serif;
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #c9a96e 0%, #6b4c3b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .bg-gradient-gold {
+        background: linear-gradient(135deg, #c9a96e 0%, #b8935a 100%);
+      }
+
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(107, 76, 59, 0.15);
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: linear-gradient(90deg, #c9a96e, #6b4c3b);
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .pattern-bg {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a96e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      .blob {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        animation: blob 8s ease-in-out infinite;
+      }
+
+      @keyframes blob {
+        0%,
+        100% {
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        50% {
+          border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        }
+      }
+
+      /* Decorative line */
+      .line-decoration::before,
+      .line-decoration::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+      }
+    </style>
+  </head>
+  <body class="bg-cream text-brown-700 antialiased">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md transition-all duration-300"
+    >
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="#accueil" class="flex items-center space-x-2">
+            <span
+              class="text-2xl md:text-3xl font-serif font-semibold text-brown-700"
+              >L'Atelier Douceur</span
+            >
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-10">
+            <a
+              href="#accueil"
+              class="nav-link text-brown-700 hover:text-gold-400 transition-colors font-light tracking-wide"
+              >Accueil</a
+            >
+            <a
+              href="#prestations"
+              class="nav-link text-brown-700 hover:text-gold-400 transition-colors font-light tracking-wide"
+              >Prestations</a
+            >
+            <a
+              href="#tarifs"
+              class="nav-link text-brown-700 hover:text-gold-400 transition-colors font-light tracking-wide"
+              >Tarifs</a
+            >
+            <a
+              href="#a-propos"
+              class="nav-link text-brown-700 hover:text-gold-400 transition-colors font-light tracking-wide"
+              >À propos</a
+            >
+            <a
+              href="#contact"
+              class="bg-gradient-gold hover:opacity-90 text-white px-6 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg font-light tracking-wide"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 text-brown-700 hover:text-gold-400 transition-colors"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden pb-6">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#accueil"
+              class="text-brown-700 hover:text-gold-400 transition-colors py-2 font-light tracking-wide"
+              >Accueil</a
+            >
+            <a
+              href="#prestations"
+              class="text-brown-700 hover:text-gold-400 transition-colors py-2 font-light tracking-wide"
+              >Prestations</a
+            >
+            <a
+              href="#tarifs"
+              class="text-brown-700 hover:text-gold-400 transition-colors py-2 font-light tracking-wide"
+              >Tarifs</a
+            >
+            <a
+              href="#a-propos"
+              class="text-brown-700 hover:text-gold-400 transition-colors py-2 font-light tracking-wide"
+              >À propos</a
+            >
+            <a
+              href="#contact"
+              class="bg-gradient-gold text-white px-6 py-2.5 rounded-full transition-all text-center font-light tracking-wide"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="accueil"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden bg-cream pattern-bg"
+    >
+      <!-- Decorative Elements -->
+      <div
+        class="absolute top-20 left-10 w-72 h-72 bg-gold-100/40 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-20 right-10 w-96 h-96 bg-beige-200/50 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute top-1/3 right-1/4 w-64 h-64 bg-gold-100/30 blob"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 relative z-10">
+        <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+          <!-- Decorative Line -->
+          <div
+            class="flex items-center justify-center gap-4 mb-10 line-decoration"
+          >
+            <span
+              class="text-gold-400 text-sm tracking-[0.3em] uppercase font-light px-4"
+              >Esthéticienne à Mérignac</span
+            >
+          </div>
+
+          <!-- Main Heading -->
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium text-brown-700 leading-tight mb-8"
+          >
+            Une parenthèse<br />
+            <span class="text-gradient italic">hors du temps</span>,<br />
+            rien que pour vous
+          </h1>
+
+          <!-- Subtitle -->
+          <p
+            class="text-lg md:text-xl text-brown-500 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
+          >
+            Offrez-vous un moment de détente absolue dans un cadre chaleureux et
+            apaisant
+          </p>
+
+          <!-- CTA Button -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-6"
+          >
+            <a
+              href="#contact"
+              class="group bg-gradient-gold hover:opacity-90 text-white px-10 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-gold-400/20 font-light text-lg tracking-wide flex items-center"
+            >
+              Prendre rendez-vous
+              <svg
+                class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+            <a
+              href="#prestations"
+              class="text-brown-600 hover:text-gold-500 font-light flex items-center transition-colors tracking-wide"
+            >
+              Découvrir les soins
+              <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <svg
+          class="w-6 h-6 text-gold-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Prestations Section -->
+    <section id="prestations" class="py-24 bg-beige-200/30 pattern-bg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-gold-400 text-sm tracking-[0.25em] uppercase font-light"
+            >Nos soins</span
+          >
+          <h2
+            class="text-4xl md:text-5xl font-serif font-medium text-brown-700 mt-4 mb-6"
+          >
+            Prestations <span class="italic text-gold-500">d'exception</span>
+          </h2>
+          <p class="text-brown-500 max-w-2xl mx-auto font-light">
+            Des soins minutieusement élaborés pour vous offrir une expérience de
+            bien-être incomparable
+          </p>
+        </div>
+
+        <!-- Services Cards -->
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+          <!-- Massage Card -->
+          <div
+            class="card-hover bg-cream rounded-2xl overflow-hidden shadow-lg shadow-brown-200/20 border border-beige-200"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="h-56 bg-gradient-to-br from-beige-100 to-beige-200 flex items-center justify-center relative overflow-hidden"
+            >
+              <div class="absolute inset-0 opacity-20">
+                <svg
+                  class="w-full h-full"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <pattern
+                      id="pattern1"
+                      patternUnits="userSpaceOnUse"
+                      width="20"
+                      height="20"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="1"
+                        fill="#c9a96e"
+                        opacity="0.3"
+                      />
+                    </pattern>
+                  </defs>
+                  <rect fill="url(#pattern1)" width="100" height="100" />
+                </svg>
+              </div>
+              <svg
+                class="w-24 h-24 text-gold-400 relative z-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="bg-gold-100 text-gold-600 text-sm px-4 py-1.5 rounded-full font-light tracking-wide"
+                  >1 heure</span
+                >
+                <span class="text-2xl font-serif font-medium text-gold-500"
+                  >110€</span
+                >
+              </div>
+              <h3 class="text-2xl font-serif font-medium text-brown-700 mb-4">
+                Massage Relaxant
+              </h3>
+              <p class="text-brown-500 leading-relaxed mb-6 font-light">
+                Un massage à l'huile alliant les techniques californiennes et
+                caribéennes pour une détente profonde et durable.
+              </p>
+              <ul class="space-y-3 text-brown-600 font-light">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-gold-400 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Techniques californiennes & caribéennes
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-gold-400 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Massage à l'huile
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-gold-400 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Accueil + douche + retour au calme
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="mt-8 w-full bg-gradient-gold hover:opacity-90 text-white py-3.5 rounded-full transition-all duration-300 hover:shadow-lg font-light tracking-wide flex items-center justify-center"
+              >
+                Réserver ce soin
+              </a>
+            </div>
+          </div>
+
+          <!-- Facial Card -->
+          <div
+            class="card-hover bg-cream rounded-2xl overflow-hidden shadow-lg shadow-brown-200/20 border border-beige-200"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="h-56 bg-gradient-to-br from-beige-100 to-gold-100/50 flex items-center justify-center relative overflow-hidden"
+            >
+              <div class="absolute inset-0 opacity-20">
+                <svg
+                  class="w-full h-full"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <pattern
+                      id="pattern2"
+                      patternUnits="userSpaceOnUse"
+                      width="20"
+                      height="20"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="1"
+                        fill="#6b4c3b"
+                        opacity="0.2"
+                      />
+                    </pattern>
+                  </defs>
+                  <rect fill="url(#pattern2)" width="100" height="100" />
+                </svg>
+              </div>
+              <svg
+                class="w-24 h-24 text-gold-400 relative z-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"
+                />
+              </svg>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="bg-gold-100 text-gold-600 text-sm px-4 py-1.5 rounded-full font-light tracking-wide"
+                  >1 heure</span
+                >
+                <span class="text-2xl font-serif font-medium text-gold-500"
+                  >80€</span
+                >
+              </div>
+              <h3 class="text-2xl font-serif font-medium text-brown-700 mb-4">
+                Soin du Visage Complet
+              </h3>
+              <p class="text-brown-500 leading-relaxed mb-6 font-light">
+                Un soin visage complet pour révéler l'éclat naturel de votre
+                peau avec des produits de qualité.
+              </p>
+              <ul class="space-y-3 text-brown-600 font-light">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-gold-400 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Nettoyage en profondeur
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-gold-400 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Gommage & masque
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-gold-400 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Modelage relaxant
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-gold-400 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Application crème de jour
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="mt-8 w-full bg-gradient-gold hover:opacity-90 text-white py-3.5 rounded-full transition-all duration-300 hover:shadow-lg font-light tracking-wide flex items-center justify-center"
+              >
+                Réserver ce soin
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarifs Section -->
+    <section id="tarifs" class="py-24 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-gold-400 text-sm tracking-[0.25em] uppercase font-light"
+            >Tarifs</span
+          >
+          <h2
+            class="text-4xl md:text-5xl font-serif font-medium text-brown-700 mt-4 mb-6"
+          >
+            Grille <span class="italic text-gold-500">tarifaire</span>
+          </h2>
+          <p class="text-brown-500 max-w-2xl mx-auto font-light">
+            Des tarifs transparents pour des prestations de qualité
+          </p>
+        </div>
+
+        <!-- Pricing Table -->
+        <div class="max-w-3xl mx-auto">
+          <div
+            class="bg-white rounded-2xl shadow-xl shadow-brown-100/30 overflow-hidden border border-beige-200"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <!-- Header -->
+            <div class="bg-gradient-gold px-8 py-6">
+              <h3
+                class="text-2xl font-serif font-medium text-white text-center tracking-wide"
+              >
+                Prestations & Tarifs
+              </h3>
+            </div>
+
+            <!-- Pricing Items -->
+            <div class="divide-y divide-beige-100">
+              <div
+                class="px-8 py-6 flex items-center justify-between hover:bg-beige-50/50 transition-colors"
+              >
+                <div>
+                  <h4 class="text-lg font-serif font-medium text-brown-700">
+                    Massage Relaxant
+                  </h4>
+                  <p class="text-brown-400 text-sm font-light mt-1">
+                    Californien & Caribéen • 1 heure
+                  </p>
+                </div>
+                <span class="text-2xl font-serif font-medium text-gold-500"
+                  >110€</span
+                >
+              </div>
+
+              <div
+                class="px-8 py-6 flex items-center justify-between hover:bg-beige-50/50 transition-colors"
+              >
+                <div>
+                  <h4 class="text-lg font-serif font-medium text-brown-700">
+                    Soin du Visage Complet
+                  </h4>
+                  <p class="text-brown-400 text-sm font-light mt-1">
+                    Nettoyage, gommage, masque, modelage • 1 heure
+                  </p>
+                </div>
+                <span class="text-2xl font-serif font-medium text-gold-500"
+                  >80€</span
+                >
+              </div>
+            </div>
+
+            <!-- Footer Note -->
+            <div class="bg-beige-100/50 px-8 py-4">
+              <p class="text-center text-sm text-brown-500 font-light">
+                Paiement accepté : espèces, carte bancaire
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="a-propos"
+      class="py-24 bg-beige-200/30 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gold-50/30 to-transparent"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Image Column -->
+          <div
+            class="relative order-2 lg:order-1"
+            data-aos="fade-right"
+            data-aos-duration="800"
+          >
+            <div class="relative">
+              <!-- Avatar Container -->
+              <div class="w-72 h-72 md:w-80 md:h-80 mx-auto relative">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-gold-200 to-beige-200 rounded-full"
+                ></div>
+                <div
+                  class="absolute inset-2 bg-gradient-to-br from-beige-50 to-gold-50 rounded-full overflow-hidden"
+                >
+                  <!-- Avatar Illustration -->
+                  <svg
+                    viewBox="0 0 200 200"
+                    class="w-full h-full"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <!-- Background gradient -->
+                    <defs>
+                      <linearGradient
+                        id="skinGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop offset="0%" style="stop-color: #d4a574" />
+                        <stop offset="100%" style="stop-color: #c4956a" />
+                      </linearGradient>
+                      <linearGradient
+                        id="hairGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop offset="0%" style="stop-color: #3d2314" />
+                        <stop offset="100%" style="stop-color: #2a1810" />
+                      </linearGradient>
+                      <linearGradient
+                        id="shirtGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop offset="0%" style="stop-color: #c9a96e" />
+                        <stop offset="100%" style="stop-color: #b8935a" />
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Neck -->
+                    <path
+                      d="M85 145 L85 170 L115 170 L115 145"
+                      fill="url(#skinGradient)"
+                    />
+
+                    <!-- Shoulders/Shirt -->
+                    <ellipse
+                      cx="100"
+                      cy="195"
+                      rx="55"
+                      ry="35"
+                      fill="url(#shirtGradient)"
+                    />
+                    <path
+                      d="M55 175 Q100 160 145 175 L145 200 L55 200 Z"
+                      fill="url(#shirtGradient)"
+                    />
+
+                    <!-- Hair back -->
+                    <ellipse
+                      cx="100"
+                      cy="85"
+                      rx="52"
+                      ry="55"
+                      fill="url(#hairGradient)"
+                    />
+
+                    <!-- Face -->
+                    <ellipse
+                      cx="100"
+                      cy="95"
+                      rx="42"
+                      ry="48"
+                      fill="url(#skinGradient)"
+                    />
+
+                    <!-- Hair front - curly/wavy style -->
+                    <path
+                      d="M58 75 Q55 50 70 40 Q85 32 100 35 Q115 32 130 40 Q145 50 142 75 Q140 60 130 55 Q115 48 100 50 Q85 48 70 55 Q60 60 58 75"
+                      fill="url(#hairGradient)"
+                    />
+                    <path
+                      d="M55 85 Q50 70 58 60 Q52 75 55 90"
+                      fill="url(#hairGradient)"
+                    />
+                    <path
+                      d="M145 85 Q150 70 142 60 Q148 75 145 90"
+                      fill="url(#hairGradient)"
+                    />
+                    <!-- Side hair -->
+                    <path
+                      d="M52 90 Q48 100 50 115 Q52 130 58 140 Q54 125 55 110 Q54 95 58 85 Z"
+                      fill="url(#hairGradient)"
+                    />
+                    <path
+                      d="M148 90 Q152 100 150 115 Q148 130 142 140 Q146 125 145 110 Q146 95 142 85 Z"
+                      fill="url(#hairGradient)"
+                    />
+
+                    <!-- Eyebrows -->
+                    <path
+                      d="M72 82 Q80 78 88 82"
+                      stroke="#3d2314"
+                      stroke-width="2"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M112 82 Q120 78 128 82"
+                      stroke="#3d2314"
+                      stroke-width="2"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+
+                    <!-- Eyes -->
+                    <ellipse cx="80" cy="92" rx="8" ry="5" fill="#2a1810" />
+                    <ellipse cx="120" cy="92" rx="8" ry="5" fill="#2a1810" />
+                    <circle cx="82" cy="91" r="2" fill="#fff" />
+                    <circle cx="122" cy="91" r="2" fill="#fff" />
+
+                    <!-- Nose -->
+                    <path
+                      d="M100 95 Q103 105 100 112 Q97 110 95 112"
+                      stroke="#b8956a"
+                      stroke-width="1.5"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+
+                    <!-- Warm smile -->
+                    <path
+                      d="M85 120 Q100 132 115 120"
+                      stroke="#a67860"
+                      stroke-width="2.5"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M88 120 Q100 128 112 120"
+                      fill="#c47070"
+                      opacity="0.8"
+                    />
+
+                    <!-- Subtle blush -->
+                    <ellipse
+                      cx="70"
+                      cy="108"
+                      rx="8"
+                      ry="5"
+                      fill="#d4a090"
+                      opacity="0.4"
+                    />
+                    <ellipse
+                      cx="130"
+                      cy="108"
+                      rx="8"
+                      ry="5"
+                      fill="#d4a090"
+                      opacity="0.4"
+                    />
+
+                    <!-- Earrings -->
+                    <circle cx="55" cy="100" r="3" fill="#c9a96e" />
+                    <circle cx="145" cy="100" r="3" fill="#c9a96e" />
+                  </svg>
+                </div>
+                <!-- Decorative ring -->
+                <div
+                  class="absolute inset-0 border-2 border-gold-200 rounded-full"
+                ></div>
+              </div>
+
+              <!-- Decorative Elements -->
+              <div
+                class="absolute -top-4 -right-4 w-20 h-20 bg-beige-100 rounded-full -z-10"
+              ></div>
+              <div
+                class="absolute -bottom-4 -left-4 w-28 h-28 bg-gold-100/50 rounded-full -z-10"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div
+            class="order-1 lg:order-2"
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            <span
+              class="text-gold-400 text-sm tracking-[0.25em] uppercase font-light"
+              >À propos</span
+            >
+            <h2
+              class="text-4xl md:text-5xl font-serif font-medium text-brown-700 mt-4 mb-6"
+            >
+              Rencontrez <span class="italic text-gold-500">Nirvaya</span>
+            </h2>
+
+            <div class="space-y-5 text-brown-600 leading-relaxed font-light">
+              <p>
+                Passionnée par l'art du bien-être, je suis
+                <strong class="font-medium text-brown-700"
+                  >diplômée en esthétique depuis 3 ans</strong
+                >
+                et
+                <strong class="font-medium text-brown-700"
+                  >formée aux massages professionnels depuis 2 an</strong
+                >.
+              </p>
+              <p>
+                À
+                <strong class="font-medium text-brown-700"
+                  >L'Atelier Douceur</strong
+                >, je vous accueille dans un cadre
+                <strong class="font-medium text-brown-700"
+                  >chaleureux, apaisant et professionnel</strong
+                >
+                à Mérignac.
+              </p>
+              <p>
+                Chaque soin est une invitation à vous reconnecter avec
+                vous-même, loin du stress quotidien. Mon objectif : vous offrir
+                une expérience unique où chaque détail est pensé pour votre
+                confort et votre sérénité.
+              </p>
+            </div>
+
+            <!-- Decorative separator -->
+            <div class="flex items-center gap-4 my-8">
+              <div
+                class="flex-1 h-px bg-gradient-to-r from-transparent via-gold-300 to-transparent"
+              ></div>
+            </div>
+
+            <!-- Quote -->
+            <blockquote class="text-xl font-serif italic text-gold-500">
+              "Prendre soin de soi n'est pas un luxe, c'est une nécessité."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagements Section -->
+    <section class="py-24 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-gold-400 text-sm tracking-[0.25em] uppercase font-light"
+            >Mes valeurs</span
+          >
+          <h2
+            class="text-4xl md:text-5xl font-serif font-medium text-brown-700 mt-4 mb-6"
+          >
+            Mes <span class="italic text-gold-500">engagements</span>
+          </h2>
+        </div>
+
+        <!-- Engagements Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Engagement 1 - Cadre professionnel -->
+          <div
+            class="text-center group"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-beige-100 to-beige-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-beige-200"
+            >
+              <svg
+                class="w-9 h-9 text-gold-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-serif font-medium text-brown-700 mb-3">
+              Cadre professionnel
+            </h3>
+            <p class="text-brown-500 text-sm leading-relaxed font-light">
+              Un environnement soigné et du matériel de qualité professionnelle
+            </p>
+          </div>
+
+          <!-- Engagement 2 - Hygiène irréprochable -->
+          <div
+            class="text-center group"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-beige-100 to-beige-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-beige-200"
+            >
+              <svg
+                class="w-9 h-9 text-gold-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-serif font-medium text-brown-700 mb-3">
+              Hygiène irréprochable
+            </h3>
+            <p class="text-brown-500 text-sm leading-relaxed font-light">
+              Protocoles d'hygiène stricts pour votre sécurité et votre
+              bien-être
+            </p>
+          </div>
+
+          <!-- Engagement 3 - Respect & discrétion -->
+          <div
+            class="text-center group"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-beige-100 to-beige-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-beige-200"
+            >
+              <svg
+                class="w-9 h-9 text-gold-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-serif font-medium text-brown-700 mb-3">
+              Respect & discrétion
+            </h3>
+            <p class="text-brown-500 text-sm leading-relaxed font-light">
+              Confidentialité totale et respect de votre intimité
+            </p>
+          </div>
+
+          <!-- Engagement 4 - Écoute & adaptation -->
+          <div
+            class="text-center group"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-beige-100 to-beige-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-beige-200"
+            >
+              <svg
+                class="w-9 h-9 text-gold-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-serif font-medium text-brown-700 mb-3">
+              Écoute & adaptation
+            </h3>
+            <p class="text-brown-500 text-sm leading-relaxed font-light">
+              Des soins personnalisés selon vos besoins et vos attentes
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-24 bg-beige-200/30 relative overflow-hidden"
+    >
+      <div
+        class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-gold-50/30 to-transparent"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="text-gold-400 text-sm tracking-[0.25em] uppercase font-light"
+            >Contact</span
+          >
+          <h2
+            class="text-4xl md:text-5xl font-serif font-medium text-brown-700 mt-4 mb-6"
+          >
+            Prenez <span class="italic text-gold-500">rendez-vous</span>
+          </h2>
+          <p class="text-brown-500 max-w-2xl mx-auto font-light">
+            Réservez votre moment de détente dès maintenant
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+          <!-- Contact Form -->
+          <div
+            class="bg-cream rounded-2xl p-8 md:p-10 shadow-lg shadow-brown-100/20 border border-beige-200"
+            data-aos="fade-right"
+          >
+            <form class="space-y-6" action="#" method="POST">
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-light text-brown-600 mb-2 tracking-wide"
+                    >Nom</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 rounded-xl border border-beige-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-100 transition-all outline-none bg-white font-light"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-light text-brown-600 mb-2 tracking-wide"
+                    >Téléphone</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="w-full px-4 py-3 rounded-xl border border-beige-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-100 transition-all outline-none bg-white font-light"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-light text-brown-600 mb-2 tracking-wide"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-beige-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-100 transition-all outline-none bg-white font-light"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="service"
+                  class="block text-sm font-light text-brown-600 mb-2 tracking-wide"
+                  >Prestation souhaitée</label
+                >
+                <select
+                  id="service"
+                  name="service"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-beige-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-100 transition-all outline-none bg-white font-light"
+                >
+                  <option value="">Sélectionnez une prestation</option>
+                  <option value="massage">Massage Relaxant – 1h – 110€</option>
+                  <option value="visage">
+                    Soin du Visage Complet – 1h – 80€
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-light text-brown-600 mb-2 tracking-wide"
+                  >Message (optionnel)</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-xl border border-beige-200 focus:border-gold-400 focus:ring-2 focus:ring-gold-100 transition-all outline-none bg-white resize-none font-light"
+                  placeholder="Précisez vos disponibilités ou toute information utile..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-gradient-gold hover:opacity-90 text-white py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-gold-400/20 font-light text-lg tracking-wide flex items-center justify-center"
+              >
+                Envoyer ma demande
+                <svg
+                  class="w-5 h-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-6" data-aos="fade-left">
+            <!-- Phone -->
+            <div
+              class="bg-cream border border-beige-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-gold-100 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-6 h-6 text-gold-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4
+                    class="text-lg font-serif font-medium text-brown-700 mb-1"
+                  >
+                    Téléphone
+                  </h4>
+                  <a
+                    href="tel:0618507993"
+                    class="text-gold-500 hover:text-gold-600 transition-colors font-light text-lg"
+                    >06.18.50.79.93</a
+                  >
+                  <p class="text-sm text-brown-400 mt-1 font-light">
+                    Appel ou message
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div
+              class="bg-cream border border-beige-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-gold-100 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-6 h-6 text-gold-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4
+                    class="text-lg font-serif font-medium text-brown-700 mb-1"
+                  >
+                    Localisation
+                  </h4>
+                  <p class="text-brown-600 font-light">
+                    Mérignac, Gironde (33)
+                  </p>
+                  <p class="text-sm text-brown-400 mt-1 font-light">
+                    Adresse exacte communiquée lors de la confirmation
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div
+              class="bg-cream border border-beige-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-gold-100 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-6 h-6 text-gold-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4
+                    class="text-lg font-serif font-medium text-brown-700 mb-1"
+                  >
+                    Horaires
+                  </h4>
+                  <p class="text-brown-600 font-light">Du lundi au samedi</p>
+                  <p class="text-brown-600 font-light">
+                    8h – 19h • Sur rendez-vous
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cancellation Notice -->
+            <div
+              class="bg-gradient-to-br from-gold-50 to-beige-100 rounded-2xl p-6 border border-gold-200/50"
+            >
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-10 h-10 bg-gold-200/50 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-5 h-5 text-gold-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4
+                    class="text-base font-serif font-medium text-brown-700 mb-1"
+                  >
+                    Annulation
+                  </h4>
+                  <p class="text-brown-600 text-sm font-light">
+                    Merci de prévenir au minimum
+                    <strong class="font-medium">2 heures à l'avance</strong> en
+                    cas d'empêchement
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brown-700 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+          <!-- Logo & Tagline -->
+          <div>
+            <h3 class="text-2xl font-serif font-medium mb-2">
+              L'Atelier Douceur
+            </h3>
+            <p class="text-brown-200 text-sm font-light">
+              Esthéticienne à Mérignac
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="flex justify-center space-x-8">
+            <a
+              href="#accueil"
+              class="text-brown-200 hover:text-gold-300 transition-colors text-sm font-light"
+              >Accueil</a
+            >
+            <a
+              href="#prestations"
+              class="text-brown-200 hover:text-gold-300 transition-colors text-sm font-light"
+              >Prestations</a
+            >
+            <a
+              href="#tarifs"
+              class="text-brown-200 hover:text-gold-300 transition-colors text-sm font-light"
+              >Tarifs</a
+            >
+            <a
+              href="#contact"
+              class="text-brown-200 hover:text-gold-300 transition-colors text-sm font-light"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Copyright -->
+          <div class="text-right">
+            <p class="text-brown-200 text-sm font-light">
+              &copy; 2024 L'Atelier Douceur
+            </p>
+            <p class="text-brown-300 text-xs mt-1 font-light">
+              SIRET : 99917674600017
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      // Initialize AOS
+      AOS.init({
+        once: true,
+        duration: 800,
+        easing: "ease-out-cubic",
+      });
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu on link click
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Header scroll effect
+      const header = document.getElementById("header");
+      let lastScroll = 0;
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+          header.classList.add("shadow-md");
+        } else {
+          header.classList.remove("shadow-md");
+        }
+
+        lastScroll = currentScroll;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Form submission (demo)
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Merci pour votre message ! Je vous recontacte très rapidement.");
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
