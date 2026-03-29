@@ -1,0 +1,8 @@
+# Robots.txt pour L'Atelier Douceur
+# https://www.latelier-douceur.fr/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.latelier-douceur.fr/sitemap.xml
