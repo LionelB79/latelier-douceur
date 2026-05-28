@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fond cercle doré -->
+  <circle cx="32" cy="32" r="30" fill="#c9a96e"/>
+
+  <!-- Écrin (boîte) - partie inférieure -->
+  <path d="M16 30 L16 46 Q16 50 20 50 L44 50 Q48 50 48 46 L48 30 Z" fill="#6b4c3b"/>
+
+  <!-- Intérieur velours de l'écrin -->
+  <path d="M18 32 L18 44 Q18 47 21 47 L43 47 Q46 47 46 44 L46 32 Z" fill="#8b5a3c"/>
+
+  <!-- Couvercle de l'écrin ouvert -->
+  <path d="M14 30 L18 14 Q19 11 22 11 L42 11 Q45 11 46 14 L50 30 Z" fill="#7d5a42"/>
+
+  <!-- Reflet sur le couvercle -->
+  <path d="M20 28 L23 16 Q24 14 26 14 L38 14 Q40 14 41 16 L44 28 Z" fill="#8b6b4f"/>
+
+  <!-- Bijou/diamant au centre -->
+  <polygon points="32,24 38,32 32,40 26,32" fill="#faf6ed"/>
+  <polygon points="32,24 35,32 32,36 29,32" fill="#e8d7b0"/>
+
+  <!-- Brillance du bijou -->
+  <polygon points="32,26 34,32 32,34 30,32" fill="#fff"/>
+</svg>
